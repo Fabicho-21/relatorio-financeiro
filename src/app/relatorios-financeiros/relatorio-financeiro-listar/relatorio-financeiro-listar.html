@@ -1,1 +1,35 @@
-<p>O listar funcionou!</p>
+<h1>Relatórios Financeiros</h1>
+
+<a routerLink="/cadastrar" class="cadastrar">Cadastrar Relatório</a>
+
+<span>Qtd de relatórios: <span class="quantidade">{{relatoriosfinanceiros().length}}</span></span>
+
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Tipo</th>
+            <th>Valor Total</th>
+            <th>Data Emissão</th>
+            <th>Responsável</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(relatorio of relatoriosfinanceiros(); track relatorio.id){
+            <tr>
+                <td>{{relatorio.titulo}}</td>
+                <td>{{relatorio.tipo}}</td>
+                <td>{{relatorio.valorTotal}}</td>
+                <td>{{relatorio.dataEmissao}}</td>
+                <td>{{relatorio.responsavel}}</td>
+                <td>
+                    <a class="editar" routerLink="/editar/{{relatorio.id}}">Editar</a>
+                    <button class="apagar" (click)="apagar(relatorio.id)">Apagar</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<span>Total de relatórios: <span class="total">{{relatoriosfinanceiros().length}}</span></span>
