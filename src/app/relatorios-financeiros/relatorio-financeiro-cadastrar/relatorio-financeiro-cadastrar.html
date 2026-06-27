@@ -1,1 +1,21 @@
-<p>O cadastro funcionou</p>
+<h1>Cadastro</h1>
+
+<label for="tipo">Tipo </label>
+<input type="text" id="tipo" name="tipo" [(ngModel)]="financeiro().tipo"
+    id="tipo" placeholder="Tipo de financeiro">
+
+<label for="valortotal">Valor Total </label>
+<input type="number" id="valortotal" name="valortotal" [(ngModel)]="financeiro().valorTotal"
+    id="valortotal" placeholder="Valor total do financeiro">
+
+<label for="dataemissao">Data Emissao </label>
+<input type="text" id="dataemissao" name="dataemissao" [(ngModel)]="financeiro().dataEmissao"
+    id="dataemissao" placeholder="Selecione a data de Emissao">
+
+<label for="titulo">Titulo </label>
+<input type="text" id="titulo" name="titulo" [(ngModel)]="financeiro().titulo"
+    id="titulo" placeholder="Coloque o titulo do financeiro">
+
+<label for="responsavel">Responsavel </label>
+<input type="text" id="responsavel" name="responsavel" [(ngModel)]="financeiro().responsavel"
+    id="responsavel" placeholder="Tipo de financeiro">

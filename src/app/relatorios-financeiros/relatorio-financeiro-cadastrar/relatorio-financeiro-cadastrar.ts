@@ -1,6 +1,7 @@
-import { Component,  } from '@angular/core';
+import { Component, signal  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { RelatoriofinanceiroModel } from '../../models/relatorio-financeiro.model';
+import { RelatorioFinanceiroService } from '../../services/relatorio-financeiro.service';
 
 @Component({
   selector: 'app-relatorio-financeiro-cadastrar',
@@ -8,4 +9,13 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './relatorio-financeiro-cadastrar.html',
   styleUrl: './relatorio-financeiro-cadastrar.scss',
 })
-export class RelatorioFinanceiroCadastrar {}
+export class RelatorioFinanceiroCadastrar {
+      financeiro = signal<RelatoriofinanceiroModel> ({
+        id: 0,
+        titulo: "",
+        tipo: "",
+        valorTotal: null,
+        dataEmissao: "",
+        responsavel: ""
+      })
+}
