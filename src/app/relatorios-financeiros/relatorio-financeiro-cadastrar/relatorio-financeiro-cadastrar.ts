@@ -15,7 +15,7 @@ export class RelatorioFinanceiroCadastrar {
   private readonly router = inject(Router);
 
     relatorio = signal<RelatoriofinanceiroModel> ({
-      id: 0,
+      id: crypto.randomUUID(),
       titulo: "",
       tipo: "",
       valorTotal: null,

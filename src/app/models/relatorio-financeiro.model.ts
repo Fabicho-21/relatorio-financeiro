@@ -1,5 +1,5 @@
 export interface RelatoriofinanceiroModel {
-    id: number;
+    id: string;
     titulo: string;
     tipo: string;
     valorTotal: number | null;

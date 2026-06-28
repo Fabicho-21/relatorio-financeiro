@@ -23,8 +23,8 @@ export class RelatorioFinanceiroListar {
 
   carregarRelatorios(): void {
     this.relatorioFinancService.listar().subscribe({
-      next: relatorios => {
-        const relatoriosOrdenados = relatorios.sort((a, b) => a.titulo.localeCompare(b.titulo));
+      next: relatorio => {
+        const relatoriosOrdenados = relatorio.sort((a, b) => a.titulo.localeCompare(b.titulo));
         this.relatoriosfinanceiros.set(relatoriosOrdenados);
       },
       error: erro => {
@@ -34,7 +34,7 @@ export class RelatorioFinanceiroListar {
     });
   }
 
-  apagar(id: number): void {
+  apagar(id: string): void {
     this.relatorioFinancService.apagar(id).subscribe({
       next: () => {
         alert('Relatório apagado com sucesso');

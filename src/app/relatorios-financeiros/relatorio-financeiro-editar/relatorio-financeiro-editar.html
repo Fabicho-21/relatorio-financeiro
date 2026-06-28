@@ -1,1 +1,23 @@
-<p>O editar funcionou!</p>
+<h1>Editar</h1>
+
+<label for="tipo">Tipo </label>
+<input type="text" id="tipo" name="tipo" [(ngModel)]="relatorio().tipo"
+    id="tipo" placeholder="Tipo de financeiro">
+
+<label for="valortotal">Valor Total </label>
+<input type="number" id="valortotal" name="valortotal" [(ngModel)]="relatorio().valorTotal"
+    id="valortotal" placeholder="Valor total do financeiro">
+
+<label for="dataemissao">Data Emissao </label>
+<input type="date" id="dataemissao" name="dataemissao" [(ngModel)]="relatorio().dataEmissao"
+    id="dataemissao" placeholder="Selecione a data de Emissao">
+
+<label for="titulo">Titulo </label>
+<input type="text" id="titulo" name="titulo" [(ngModel)]="relatorio().titulo"
+    id="titulo" placeholder="Coloque o titulo do financeiro">
+
+<label for="responsavel">Responsavel </label>
+<input type="text" id="responsavel" name="responsavel" [(ngModel)]="relatorio().responsavel"
+    id="responsavel" placeholder="Tipo de relatorio">
+
+<button (click)="salvar()">Salvar</button>
